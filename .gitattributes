@@ -1,0 +1,11 @@
+# 默认统一 LF，避免跨平台 clone 后被 core.autocrlf 改成 CRLF
+* text=auto eol=lf
+
+# 例外：预检脚本是 UTF-8 with BOM + LF，交给 Git 原样保存，
+# 禁止任何换行/编码转换，否则 Windows PowerShell 5.1 会把中文解析成乱码。
+*.ps1 -text
+
+# 图片等二进制
+*.png binary
+*.jpg binary
+*.ico binary
